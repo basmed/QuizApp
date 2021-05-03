@@ -1,0 +1,23 @@
+.container{
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.overlay{
+    background-color: rgba(128, 128, 128, 0.644);
+}
+
+.counter{
+    color: #fff;
+    border-radius: 10rem;
+    border: thick groove silver;
+    padding: 1rem;
+    width: 3rem;
+    text-align: center;
+}
+
+a{
+    cursor: pointer;
+}

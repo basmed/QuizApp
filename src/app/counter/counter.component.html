@@ -1,0 +1,4 @@
+<div class="container" [ngClass]="{'overlay': start}">
+    <h2 class="counter" *ngIf="start">{{ counter }}</h2>
+    <a *ngIf="!start" (click)="startCounter();">Click To Start</a>
+  </div>

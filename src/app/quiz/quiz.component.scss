@@ -1,0 +1,33 @@
+.container{
+    max-width:1200px;
+    margin: 5rem auto;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.answers{
+    display: grid;
+    text-align: left;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__list{
+        list-style: none;
+    }
+    &__item{
+        border: lightgray thin solid;
+        padding: 1rem;
+        margin: 2rem 1rem 0;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+
+.btn{
+    font-size: 1.5rem;
+    width: 20rem;
+    padding: 1rem;
+    cursor: pointer;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+        <div *ngIf="currentQuiz < 10">
+        <p class="text-center">{{ currentQuiz +1 }} of {{ quizzes.length }}</p>
+        <h1>{{ quizzes[currentQuiz].question }}</h1>
+
+  <div class="answers">
+    <ul class="answers__list" *ngFor="let quiz of quizzes[currentQuiz].answer">
+        <label><li class="answers__item" appBackground [correctAnswer]="quiz.correct">
+            <input type="radio" name="options" (change)="onAnswer(quiz.correct)" [disabled]="answerSelected">
+            {{ quiz.option }}
+        </li></label>
+      </ul>
+  </div>
+        
+        </div>
+
+
+        <div *ngIf="currentQuiz > 9">
+        <button class="btn" (click)="showResult()" *ngIf="resultStatus === 'Show Result'">{{ resultStatus }}</button>
+        <button class="btn btn--new" (click)="playAgain()" *ngIf="resultStatus !== 'Show Result'">{{ resultStatus }}</button>
+        <div *ngIf="result">
+          Correct Answers: {{ correctAnswers }} | Inocrrect Answers: {{ incorrectAnswers }}
+        </div>
+      </div>
+   
+
+  </div>
+  
