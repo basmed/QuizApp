@@ -33,7 +33,7 @@ export class QuizService {
       answer: [
         { option: 'London', correct: true },
         { option: 'Asmara', correct: false },
-        { option: 'London', correct: false },
+        { option: 'Paris', correct: false },
         { option: 'Berlin', correct: false }
       ]
     },

@@ -1,6 +1,6 @@
 <div class="container">
-        <div *ngIf="currentQuiz < 10">
-        <p class="text-center">{{ currentQuiz +1 }} of {{ quizzes.length }}</p>
+        <div *ngIf="prevAnswered.length < 11">
+        <p class="text-center">{{ prevAnswered.length }} of {{ quizzes.length }}</p>
         <h1>{{ quizzes[currentQuiz].question }}</h1>
 
   <div class="answers">
@@ -15,7 +15,7 @@
         </div>
 
 
-        <div *ngIf="currentQuiz > 9">
+        <div *ngIf="prevAnswered.length > 10">
         <button class="btn" (click)="showResult()" *ngIf="resultStatus === 'Show Result'">{{ resultStatus }}</button>
         <button class="btn btn--new" (click)="playAgain()" *ngIf="resultStatus !== 'Show Result'">{{ resultStatus }}</button>
         <div *ngIf="result">

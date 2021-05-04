@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class CounterComponent {
   start = false;
-  counter = 10;
+  counter = 5;
   interval:any;
 
 constructor(private router: Router){}
