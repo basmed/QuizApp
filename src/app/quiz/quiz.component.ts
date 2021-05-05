@@ -1,10 +1,16 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { QuizService } from '../quiz.service';
 
 @Component({
   selector: 'app-quiz',
   templateUrl: './quiz.component.html',
-  styleUrls: ['./quiz.component.scss']
+  styleUrls: ['./quiz.component.scss'],
+  animations:[  
+    trigger('answer', [
+      transition('void => *', [style({ opacity: 0, transform: 'translateY(-3rem)'}), animate(300)])
+    ])
+  ]
 })
 export class QuizComponent implements OnInit {
   quizzes = [];
